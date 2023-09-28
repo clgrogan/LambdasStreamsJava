@@ -1,9 +1,7 @@
-package com.ls.streams;
+package com.ls.streams.exercise;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
-import com.ls.streams.exercise.Planet;
 
 public class PlanetUtils {
 
@@ -34,6 +32,22 @@ public class PlanetUtils {
 		// filter to planets with density > 5
 		// collect and return list of matching planets
 		return planets.stream().filter(e -> e.getDensity() > 5.0).collect(Collectors.toList());
+	}
+	
+	public int getCountOfRingedPlanets(List<Planet> planets) {
+		// list -> stream
+		// count to get number of planets with rings
+		// return result
+		return (int) planets.stream().filter(p->p.getHasRings()).count();
+	}
+
+	public int getTotalNumberOfMoonsAllPlanets(List<Planet> planets) {
+		// list -> stream
+		// reduce to get count of all moons in solar system
+		// return result
+		int totalMoons = planets.stream()
+                .reduce(0, (sum, ob) -> sum + ob.getNumberOfMoons(), Integer::sum);;
+		return totalMoons;
 	}
 
 }

@@ -1,9 +1,7 @@
-package com.ls.streams;
+package com.ls.streams.exercise;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.ls.streams.exercise.Planet;
 
 public class SolarSystem {
 
