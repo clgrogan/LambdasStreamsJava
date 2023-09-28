@@ -7,7 +7,7 @@ import com.ls.lambdas.exercise.EmployeeUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class EmployeeTest {
+class EmployeeUtilsTest {
 
   private EmployeeUtils employeeUtils = new EmployeeUtils();
 
